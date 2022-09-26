@@ -6,8 +6,10 @@
 // React virtual DOM
 // ReactDOM.render()
 // What is JSX
-// import, export
+// import
 
 ///////////////////// lesson 2 /////////////////////
 
 // Props, components
+// export, import
+// props children
