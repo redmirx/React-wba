@@ -15,3 +15,11 @@
 // props children
 
 ///////////////////// lesson 3 /////////////////////
+
+// state
+// constructor
+// super
+// onClick, onChange,
+// button, input, select, checkbox
+
+///////////////////// lesson 4 /////////////////////
