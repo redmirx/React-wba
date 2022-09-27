@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import "./style.css";
 
-class Fruit extends Component {
+class Card extends Component {
   render() {
     return (
       <div className="box">
@@ -14,4 +14,4 @@ class Fruit extends Component {
   }
 }
 
-export default Fruit;
+export default Card;

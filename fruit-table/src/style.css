@@ -4,6 +4,7 @@ body {
 
 .container {
   max-width: 860px;
+  /* min-height: 860px; */
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
