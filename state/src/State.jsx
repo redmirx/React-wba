@@ -6,7 +6,9 @@ class State extends Component {
     this.state = { count: 0 };
   }
   render() {
-    const plus = () => {};
+    const plus = () => {
+      this.setState({});
+    };
     const minus = () => {};
     return (
       <div>
