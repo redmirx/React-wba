@@ -13,3 +13,5 @@
 // Props, components
 // export, import
 // props children
+
+///////////////////// lesson 3 /////////////////////
