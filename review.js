@@ -23,3 +23,7 @@
 // button, input, select, checkbox
 
 ///////////////////// lesson 4 /////////////////////
+
+// function call
+// multi state change
+// student list => add, delete, filter
