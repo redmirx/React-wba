@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { student } from "./data";
 
 class App extends Component {
   constructor() {
@@ -7,6 +8,7 @@ class App extends Component {
       title: "Webbrain",
       name: "Abdurakhmon",
       surname: "Otajonov",
+      data: student,
     };
   }
   render() {
@@ -18,7 +20,13 @@ class App extends Component {
       this.setState({ [event.target.name]: event.target.value });
       // console.log(event.target.name);
     };
-
+    const onFilter = (event) => {
+      let result = student.filter((value) =>
+        value.name.toLowerCase().includes(event.target.value.toLowerCase())
+      );
+      // console.log(result);
+      this.setState({ data: result });
+    };
     return (
       <div>
         <h1>{this.state.title}</h1>
@@ -43,6 +51,16 @@ class App extends Component {
           type="text"
           placeholder="Change the surname"
         />
+        <hr />
+        <input onChange={onFilter} type="text" placeholder="Filter by name" />
+
+        {this.state.data.map((value) => {
+          return (
+            <h1 key={value.id}>
+              {value.id}. {value.name} ({value.status})
+            </h1>
+          );
+        })}
       </div>
     );
   }
