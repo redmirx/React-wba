@@ -5,10 +5,11 @@ class App extends Component {
   constructor() {
     super();
     this.state = {
-      title: "Webbrain",
-      name: "Abdurakhmon",
-      surname: "Otajonov",
+      title: "CRUD Application",
+      name: "",
+      status: "",
       data: student,
+      search: "id",
     };
   }
   render() {
@@ -22,7 +23,9 @@ class App extends Component {
     };
     const onFilter = (event) => {
       let result = student.filter((value) =>
-        value.name.toLowerCase().includes(event.target.value.toLowerCase())
+        `${value[this.state.search]}`
+          .toLowerCase()
+          .includes(event.target.value.toLowerCase())
       );
       // console.log(result);
       this.setState({ data: result });
@@ -32,33 +35,62 @@ class App extends Component {
       let result = this.state.data.filter((value) => value.id !== id);
       this.setState({ data: result });
     };
+
+    const onAdd = () => {
+      let user = {
+        id: this.state.data.length + 1,
+        name: this.state.name,
+        status: this.state.status,
+      };
+      console.log(user);
+      this.state.name && this.state.status !== ""
+        ? this.setState({
+            data: [...this.state.data, user],
+            name: "",
+            status: "",
+          })
+        : alert("Please fill out the field");
+    };
+    const onSelect = (event) => {
+      console.log(event.target.value);
+      this.setState({ search: event.target.value });
+    };
     return (
       <div>
         <h1>{this.state.title}</h1>
         <h1>Name : {this.state.name}</h1>
-        <h1>Surname : {this.state.surname}</h1>
+        <h1>Status : {this.state.status}</h1>
         <input
           onChange={(event) => onChangeTitle(event)}
           type="text"
           placeholder="Change the title"
         />
-        <br />
+        <hr></hr>
         <input
+          value={this.state.name}
           name="name"
           onChange={onChange}
           type="text"
-          placeholder="Change the name"
+          placeholder="Name"
         />
         <br />
         <input
-          name="surname"
+          value={this.state.status}
+          name="status"
           onChange={onChange}
           type="text"
-          placeholder="Change the surname"
+          placeholder="Status"
         />
+        <br />
+        <button onClick={onAdd}>Add</button>
         <hr />
         <center>
-          <input onChange={onFilter} type="text" placeholder="Filter by name" />
+          <select onChange={onSelect} name="" id="">
+            <option value="id">ID</option>
+            <option value="name">Name</option>
+            <option value="status">Status</option>
+          </select>
+          <input onChange={onFilter} type="text" placeholder="Serch" />
           <table border={1} width="50%">
             <thead>
               <tr>
