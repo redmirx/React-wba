@@ -4,9 +4,9 @@ class App extends Component {
   render() {
     return (
       <Container>
-        <Box>Large</Box>
-        <Box>Medium</Box>
-        <Box>Small</Box>
+        <Box type="large">Large</Box>
+        <Box type="medium">Medium</Box>
+        <Box type="small">Small</Box>
       </Container>
     );
   }
