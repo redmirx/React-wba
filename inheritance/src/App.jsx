@@ -1,11 +1,11 @@
 import React, { Component } from "react";
-import { Container } from "./AppStyle";
+import { Container, Button } from "./AppStyle";
 
 class App extends Component {
   render() {
     return (
       <Container>
-        <h1>Hello world</h1>
+        <Button>Click me</Button>
       </Container>
     );
   }
