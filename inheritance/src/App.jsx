@@ -1,11 +1,12 @@
 import React, { Component } from "react";
+import { Container } from "./AppStyle";
 
 class App extends Component {
   render() {
     return (
-      <div>
+      <Container>
         <h1>Hello world</h1>
-      </div>
+      </Container>
     );
   }
 }
