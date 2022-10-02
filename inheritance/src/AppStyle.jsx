@@ -7,16 +7,17 @@ export const Center = css`
 `;
 
 export const Container = styled.div`
-  background-color: yellow;
+  background-color: #222;
   ${Center}
-  gap: 10px;
+  gap: 20px;
+  padding: 20px;
 `;
 
 export const Button = styled.div`
   ${Center}
   width: 100px;
   height: 30px;
-  background-color: coral;
+  background-color: #ef476f;
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
