@@ -21,6 +21,8 @@ export const Button = styled.div`
   border-radius: 20px;
   color: #fff;
   cursor: pointer;
+  font-family: sans-serif;
+  font-size: 14px;
   :active {
     transform: scale(0.97);
     opacity: 0.7;
