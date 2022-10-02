@@ -9,6 +9,7 @@ export const Center = css`
 export const Container = styled.div`
   background-color: yellow;
   ${Center}
+  gap: 10px;
 `;
 
 export const Button = styled.div`
@@ -21,5 +22,8 @@ export const Button = styled.div`
   cursor: pointer;
   :active {
     transform: scale(0.97);
+    opacity: 0.7;
   }
 `;
+
+export const ActiveButton = styled(Button)``;
