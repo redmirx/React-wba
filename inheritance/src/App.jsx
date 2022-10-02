@@ -1,13 +1,16 @@
 import React, { Component } from "react";
-import { Container, Button, ActiveButton } from "./AppStyle";
+import { Container, Button, ActiveButton, Rotate } from "./AppStyle";
 
 class App extends Component {
   render() {
     return (
-      <Container>
-        <Button>Click me</Button>
-        <ActiveButton>Active button</ActiveButton>
-      </Container>
+      <div>
+        <Container>
+          <Button>Click me</Button>
+          <ActiveButton>Active button</ActiveButton>
+        </Container>
+        <Rotate>Rotate</Rotate>
+      </div>
     );
   }
 }

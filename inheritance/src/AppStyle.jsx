@@ -1,9 +1,18 @@
-import styled, { css } from "styled-components";
+import styled, { css, keyframes } from "styled-components";
 
 export const Center = css`
   display: flex;
   justify-content: center;
   align-items: center;
+`;
+
+const rotate = keyframes`
+ from{
+  transform: rotate(0deg);
+ } 
+ to{
+  transform: rotate(360deg);
+ }
 `;
 
 export const Container = styled.div`
@@ -30,3 +39,26 @@ export const Button = styled.div`
 `;
 
 export const ActiveButton = styled(Button)``;
+
+export const Rotate = styled.div`
+  width: 100px;
+  height: 100px;
+  background-color: #444;
+  margin: 20px auto;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  border: 2px solid springgreen;
+  :hover {
+    animation: ${rotate} 2s infinite linear;
+  }
+  :active {
+    background-color: springgreen;
+    border-color: #444;
+    color: #444;
+    box-shadow: 0 0 20px 3px #222;
+  }
+  cursor: pointer;
+`;
