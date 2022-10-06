@@ -4,7 +4,6 @@ export const studentData = [
     fullName: "Otajonov Abdurahmon",
     phoneNumber: "123-45-67-1",
     status: "UNM",
-    delete: null,
   },
   {
     id: 2 * Math.random(),

@@ -1,18 +1,17 @@
 import React, { Component } from "react";
 import TableCom from "./Components/Table";
+import { Center } from "./Components/Table/style";
 
 class App extends Component {
   render() {
     return (
-      <div
+      <Center
         style={{
           margin: 100,
-          border: "2px solid springgreen",
-          // width: "fit-content",
         }}
       >
         <TableCom />
-      </div>
+      </Center>
     );
   }
 }

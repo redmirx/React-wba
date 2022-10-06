@@ -1,0 +1,12 @@
+.icon-del {
+  width: 24px;
+  height: 24px;
+  stroke: red;
+}
+.icon-del:hover {
+  stroke: #fff;
+  background-color: red;
+  border-radius: 50%;
+  padding: 2px;
+  cursor: pointer;
+}
