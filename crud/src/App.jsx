@@ -35,7 +35,7 @@ class App extends Component {
       let result = this.state.data.filter((value) => value.id !== id);
       this.setState({ data: result });
     };
-
+    //////////////////////////////////////
     const onAdd = () => {
       let user = {
         id: this.state.data.length + 1,
@@ -51,6 +51,7 @@ class App extends Component {
           })
         : alert("Please fill out the field");
     };
+    ////////////////////////////////////////////
     const onSelect = (event) => {
       console.log(event.target.value);
       this.setState({ search: event.target.value });

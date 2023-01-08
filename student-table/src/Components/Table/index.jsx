@@ -4,16 +4,26 @@ import { studentData } from "../../data";
 import "./style.css";
 
 export default class TableCom extends Component {
-  state = {
-    studentData,
-  };
+  constructor(props) {
+    super(props);
+    this.state = {
+      data: studentData,
+      name: "",
+      phone: "",
+      status: "",
+    };
+  }
+  // state = {
+  //   studentData,
+  // };
+
   render() {
     return (
       <Container>
         <Table>
           <Table.Thead sticky>
             <Table.Trow>
-              {Object.keys(this.state.studentData[0]).map((value) => {
+              {Object.keys(this.state.data[0]).map((value) => {
                 return (
                   <Table.Theading
                     key={value}
@@ -27,7 +37,7 @@ export default class TableCom extends Component {
             </Table.Trow>
           </Table.Thead>
           <Table.Tbody>
-            {this.state.studentData.map((student) => {
+            {this.state.data.map((student) => {
               return (
                 <Table.Trow key={student.id}>
                   <Table.Tdata sticky>{Math.trunc(student.id)}</Table.Tdata>
@@ -44,10 +54,10 @@ export default class TableCom extends Component {
                         stroke="currentColor"
                         className="icon-del"
                         onClick={() => {
-                          const result = this.state.studentData.filter(
+                          const result = this.state.data.filter(
                             (value) => value.id !== student.id
                           );
-                          this.setState({ studentData: result });
+                          this.setState({ data: result });
                         }}
                       >
                         <path
